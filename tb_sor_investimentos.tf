@@ -4,7 +4,7 @@ resource "aws_glue_catalog_database" "database_sor" {
 
 resource "aws_glue_catalog_table" "sor_investimentos" {
   name          = var.table_sor_name
-  database_name = aws_glue_catalog_database.database.name
+  database_name = aws_glue_catalog_database.database_sor.name
   table_type    = "EXTERNAL_TABLE"
 
   parameters = {
